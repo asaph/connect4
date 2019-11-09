@@ -11,5 +11,7 @@ class BoardTest {
         Board board = new Board();
         assertEquals(Board.DEFAULT_ROWS, board.getRows());
         assertEquals(Board.DEFAULT_COLUMNS, board.getColumns());
+
+        System.out.println(board.toColorString());
     }
 }

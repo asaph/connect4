@@ -12,6 +12,12 @@ class BoardTest {
         assertEquals(Board.DEFAULT_ROWS, board.getRows());
         assertEquals(Board.DEFAULT_COLUMNS, board.getColumns());
 
+        board.move(3, DiscColor.RED);
+        board.move(3, DiscColor.BLACK);
+        board.move(2, DiscColor.RED);
+        board.move(3, DiscColor.RED);
+        board.move(3, DiscColor.BLACK);
+
         System.out.println(board.toColorString());
     }
 }

@@ -26,6 +26,16 @@ public class Board {
         this(DEFAULT_ROWS, DEFAULT_COLUMNS);
     }
 
+    public void move(int column, DiscColor discColor) {
+        if (column < 0 || column > this.columns) {
+            throw new IllegalArgumentException("Invalid column index: " + column);
+        }
+        if (rowHeights[column] >= this.rows) {
+            throw new IllegalArgumentException("Column " + column + " is full");
+        }
+        moves[rowHeights[column]++][column] = discColor;
+    }
+
     @Override
     public String toString() {
         return toString(false);

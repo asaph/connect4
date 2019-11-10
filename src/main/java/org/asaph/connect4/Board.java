@@ -27,7 +27,7 @@ public class Board {
     }
 
     public void move(int column, DiscColor discColor) {
-        if (column < 0 || column > this.columns) {
+        if (column < 0 || column >= this.columns) {
             throw new IllegalArgumentException("Invalid column index: " + column);
         }
         if (rowHeights[column] >= this.rows) {

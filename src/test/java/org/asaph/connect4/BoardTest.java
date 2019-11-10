@@ -20,4 +20,16 @@ class BoardTest {
 
         System.out.println(board.toColorString());
     }
+
+    @Test
+    void testInvalidMoveNegativeIndex() {
+        Board board = new Board();
+        assertThrows(IllegalArgumentException.class, () -> board.move(-1, DiscColor.RED));
+    }
+
+    @Test
+    void testInvalidMoveIndexOutOfBounds() {
+        Board board = new Board();
+        assertThrows(IllegalArgumentException.class, () -> board.move(Board.DEFAULT_COLUMNS, DiscColor.RED));
+    }
 }

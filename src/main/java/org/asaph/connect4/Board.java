@@ -19,7 +19,7 @@ public class Board {
         this.rows = rows;
         this.columns = columns;
         this.moves = new DiscColor[this.rows][this.columns];
-        this.rowHeights = new int[this.rows];
+        this.rowHeights = new int[this.columns];
     }
 
     public Board() {
